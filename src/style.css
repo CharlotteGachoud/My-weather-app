@@ -22,11 +22,16 @@ div.current-temp, .icon, .real-feel-text, .real-feel-temp, .forecast, .code-by{
 
 img{
   display: block;
-  margin: 50px auto 50px;
+  margin: 50px auto 10px;
+  max-width: 280px;
 }
 
 div.humidity, .wind, .sunrise, .sunset{
   text-align: right;
+}
+
+.sentence{
+  margin: 0 auto 30px;
 }
 
 
