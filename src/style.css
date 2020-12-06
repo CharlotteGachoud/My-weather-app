@@ -1,5 +1,5 @@
 body{
-  font-family: 'Dosis', sans-serif, Courier;
+  font-family: 'Dosis', sans-serif;
 }
 
 div.container{
@@ -10,6 +10,8 @@ div.container{
 div.card{
   border-radius: 10px;
   border: 1px solid rgba(0, 105, 217, 0.2);
+  background: rgba(7, 104, 159, 0.1);
+
 }
 
 
@@ -25,7 +27,7 @@ p, .icon, .current-temp, .real-feel-text, .real-feel-temp, .forecast, .code-by{
 
 img{
   display: block;
-  margin: 50px auto 10px;
+  margin: 30px auto 10px;
   max-width: 280px;
 }
 
@@ -49,7 +51,7 @@ a.farenheit {
 }
 
 .sentence{
-  margin: 0 auto 30px;
+  margin: 40px auto 40px;
 }
 
 .description-forecast{
@@ -65,7 +67,9 @@ a.farenheit {
 
 .indications, .sunrise-set, .real-feel-text, .real-feel-temp, .week-days, .sentence{
   font-size: 20px;
+
 }
+
 .current-temp{
   font-size: 32px;
 }
