@@ -73,3 +73,7 @@ a.farenheit {
 .code-by{
   font-size: 15px;
 }
+
+.forecast{
+  margin: 0 auto 12px;
+}
