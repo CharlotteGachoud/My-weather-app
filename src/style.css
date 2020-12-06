@@ -4,7 +4,7 @@ body{
 
 div.container{
   margin: 50px auto 5px;
-  max-width: 700px;
+  max-width: 750px;
 }
 
 div.card{
@@ -28,10 +28,18 @@ img{
 
 div.humidity, .wind, .sunrise, .sunset{
   text-align: right;
+  font-weight: 600;
 }
 
 .sentence{
   margin: 0 auto 30px;
 }
 
+h1, a.celsius, .week-days, .now-temp, .open-source-link {
+  font-weight: 600;
+}
+
+form{
+  margin: 0 5px 40px;
+}
 
