@@ -4,7 +4,7 @@ body{
 
 div.container{
   margin: 50px auto 5px;
-  max-width: 750px;
+  max-width: 800px;
 }
 
 div.card{
@@ -48,7 +48,6 @@ a.farenheit {
   text-decoration: none;
 }
 
-
 .sentence{
   margin: 0 auto 30px;
 }
@@ -62,4 +61,15 @@ a.farenheit {
 
 .min-temp{
   color: #0056B3;
+}
+
+.indications, .sunrise-set, .real-feel-text, .real-feel-temp, .week-days, .sentence{
+  font-size: 20px;
+}
+.current-temp{
+  font-size: 32px;
+}
+
+.code-by{
+  font-size: 15px;
 }
