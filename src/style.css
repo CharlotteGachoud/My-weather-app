@@ -11,13 +11,16 @@ div.card{
   border-radius: 10px;
   border: 1px solid rgba(0, 105, 217, 0.2);
 }
+
+
 h1,
-p{
+p, .icon, .current-temp, .real-feel-text, .real-feel-temp, .forecast, .code-by{
   text-align: center;
   line-height: 1.5;
 }
-div.current-temp, .icon, .real-feel-text, .real-feel-temp, .forecast, .code-by{
-  text-align: center;
+
+ div.current-temp, .icon, .wind, .current-date{
+  margin-bottom: 30px;
 }
 
 img{
@@ -31,15 +34,18 @@ div.humidity, .wind, .sunrise, .sunset{
   font-weight: 600;
 }
 
-.sentence{
-  margin: 0 auto 30px;
+.description-forecast{
+  margin-top: 20px;
 }
 
-h1, a.celsius, .week-days, .now-temp, .open-source-link {
+h1, .week-days, .now-temp, .open-source-link {
   font-weight: 600;
 }
 
 form{
-  margin: 0 5px 40px;
+  margin: 12px 5px 52px;
 }
 
+.sentence{
+  margin: 0 auto 30px;
+}
