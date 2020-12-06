@@ -49,3 +49,11 @@ form{
 .sentence{
   margin: 0 auto 30px;
 }
+
+.max-temp{
+  color: #f0b114;
+}
+
+.min-temp{
+  color: #0056B3;
+}
