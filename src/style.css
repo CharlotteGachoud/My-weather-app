@@ -38,7 +38,7 @@ div.humidity, .wind, .sunrise, .sunset{
   margin-top: 20px;
 }
 
-h1, .week-days, .now-temp, .open-source-link {
+h1, .week-days, .now-temp, .open-source-link, .max-temp{
   font-weight: 600;
 }
 
