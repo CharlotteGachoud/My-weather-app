@@ -4,16 +4,14 @@ body{
 
 div.container{
   margin: 50px auto 5px;
-  max-width: 800px;
+  max-width: 1140px;
 }
 
 div.card{
   border-radius: 10px;
   border: 1px solid rgba(0, 105, 217, 0.2);
   background: rgba(7, 104, 159, 0.1);
-
 }
-
 
 h1,
 p, .icon, .current-temp, .real-feel-text, .real-feel-temp, .forecast, .code-by{
@@ -28,7 +26,7 @@ p, .icon, .current-temp, .real-feel-text, .real-feel-temp, .forecast, .code-by{
 img{
   display: block;
   margin: 30px auto 10px;
-  max-width: 280px;
+  max-width: 350px;
 }
 
 div.humidity, .wind, .sunrise, .sunset{
@@ -76,8 +74,4 @@ a.farenheit {
 
 .code-by{
   font-size: 15px;
-}
-
-.forecast{
-  margin: 0 auto 12px;
 }
