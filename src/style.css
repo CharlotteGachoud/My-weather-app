@@ -34,10 +34,6 @@ div.humidity, .wind, .sunrise, .sunset{
   font-weight: 600;
 }
 
-.description-forecast{
-  margin-top: 20px;
-}
-
 h1, .week-days, .now-temp, .open-source-link, .max-temp{
   font-weight: 600;
 }
@@ -46,10 +42,20 @@ form{
   margin: 12px 5px 52px;
 }
 
+a.celsius,
+a.farenheit {
+  color: black;
+  text-decoration: none;
+}
+
+
 .sentence{
   margin: 0 auto 30px;
 }
 
+.description-forecast{
+  margin-top: 20px;
+}
 .max-temp{
   color: #f0b114;
 }
