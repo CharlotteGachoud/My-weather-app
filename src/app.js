@@ -1,3 +1,36 @@
+let currentDate = new Date();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+let day = days[currentDate.getDay()];
+
+let months = [
+  "January",
+  "Februar",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+let month = months[currentDate.getMonth()];
+
+let date = currentDate.getDate();
+
+let fullDate = document.querySelector("#date");
+fullDate.innerHTML = `${day}, ${month} ${date}`;
+
 function displayTemperature(response){
 console.log(response.data);
 document.querySelector("#city").innerHTML = response.data.name;
