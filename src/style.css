@@ -45,6 +45,7 @@ form{
 .active {
   color: black;
   cursor: default;
+  font-weight: 900;
 }
 
 .active:hover {
