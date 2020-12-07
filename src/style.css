@@ -14,12 +14,12 @@ div.card{
 }
 
 h1,
-p, .icon, .current-temp, .real-feel-text, .real-feel-temp, .forecast, .code-by{
+p, .icon, .current-temp, .real-feel-text, .weather-description, .real-feel-temp, .forecast, .code-by{
   text-align: center;
   line-height: 1.5;
 }
 
- div.current-temp, .icon, .wind, .current-date{
+ div.current-temp, .weather-description, .wind, .current-date{
   margin-bottom: 40px;
 }
 
@@ -63,7 +63,7 @@ a.farenheit {
   color: #0056B3;
 }
 
-.indications, .sunrise-set, .real-feel-text, .real-feel-temp, .week-days, .sentence{
+.indications, .sunrise-set, .real-feel-text, .weather-description, .real-feel-temp, .week-days, .sentence{
   font-size: 20px;
 
 }
