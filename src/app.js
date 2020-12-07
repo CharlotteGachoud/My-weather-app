@@ -49,6 +49,8 @@ function displayTemperature(response){
   document.querySelector("#feels-like").innerHTML = Math.round(response.data.main.feels_like);
   document.querySelector("#humidity-data").innerHTML = response.data.main.humidity;
   document.querySelector("#wind-data").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+  document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description)
 }
 
 search("Cork");
