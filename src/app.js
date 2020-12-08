@@ -65,9 +65,9 @@ function formatDays(timestamp) {
 }
 
 function displayForecast(response){
-
-  let forecast = response.data.daily[0];
   let forecastElement = document.querySelector("#forecast");
+
+  let forecast = response.data.daily[1];
   forecastElement.innerHTML = `<div class="col">
               <p class="week-days">
                 ${formatDays(forecast.dt * 1000)}
@@ -78,13 +78,105 @@ function displayForecast(response){
               </p>
               <div class="row min-max-temp">
                 <div class="col max-temp">
-                  ${Math.round(forecast.temp.max)}°C | ${Math.round((forecast.temp.max * 9) / 5) + 32}°F
+                  ${Math.round(forecast.temp.max)}°C ${Math.round((forecast.temp.max * 9) / 5) + 32}°F
                 </div>
                 <div class="col min-temp">
-                  ${Math.round(forecast.temp.min)}°C | ${Math.round((forecast.temp.min * 9) / 5) + 32}°F
+                  ${Math.round(forecast.temp.min)}°C ${Math.round((forecast.temp.min * 9) / 5) + 32}°F
                 </div>
               </div>
             </div>`;
+
+  forecast = response.data.daily[2];
+  forecastElement.innerHTML += `<div class="col">
+              <p class="week-days">
+                ${formatDays(forecast.dt * 1000)}
+              </p>
+              <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="weather icon" id="day-1-icon">
+              <p class="description-forecast">
+                ${forecast.weather[0].description}
+              </p>
+              <div class="row min-max-temp">
+                <div class="col max-temp">
+                  ${Math.round(forecast.temp.max)}°C ${Math.round((forecast.temp.max * 9) / 5) + 32}°F
+                </div>
+                <div class="col min-temp">
+                  ${Math.round(forecast.temp.min)}°C ${Math.round((forecast.temp.min * 9) / 5) + 32}°F
+                </div>
+              </div>
+            </div>`;
+  forecast = response.data.daily[3];
+  forecastElement.innerHTML += `<div class="col">
+              <p class="week-days">
+                ${formatDays(forecast.dt * 1000)}
+              </p>
+              <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="weather icon" id="day-1-icon">
+              <p class="description-forecast">
+                ${forecast.weather[0].description}
+              </p>
+              <div class="row min-max-temp">
+                <div class="col max-temp">
+                  ${Math.round(forecast.temp.max)}°C ${Math.round((forecast.temp.max * 9) / 5) + 32}°F
+                </div>
+                <div class="col min-temp">
+                  ${Math.round(forecast.temp.min)}°C ${Math.round((forecast.temp.min * 9) / 5) + 32}°F
+                </div>
+              </div>
+            </div>`;
+  forecast = response.data.daily[4];
+  forecastElement.innerHTML += `<div class="col">
+              <p class="week-days">
+                ${formatDays(forecast.dt * 1000)}
+              </p>
+              <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="weather icon" id="day-1-icon">
+              <p class="description-forecast">
+                ${forecast.weather[0].description}
+              </p>
+              <div class="row min-max-temp">
+                <div class="col max-temp">
+                  ${Math.round(forecast.temp.max)}°C ${Math.round((forecast.temp.max * 9) / 5) + 32}°F
+                </div>
+                <div class="col min-temp">
+                  ${Math.round(forecast.temp.min)}°C ${Math.round((forecast.temp.min * 9) / 5) + 32}°F
+                </div>
+              </div>
+            </div>`;
+  forecast = response.data.daily[5];
+  forecastElement.innerHTML += `<div class="col">
+              <p class="week-days">
+                ${formatDays(forecast.dt * 1000)}
+              </p>
+              <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="weather icon" id="day-1-icon">
+              <p class="description-forecast">
+                ${forecast.weather[0].description}
+              </p>
+              <div class="row min-max-temp">
+                <div class="col max-temp">
+                  ${Math.round(forecast.temp.max)}°C ${Math.round((forecast.temp.max * 9) / 5) + 32}°F
+                </div>
+                <div class="col min-temp">
+                  ${Math.round(forecast.temp.min)}°C ${Math.round((forecast.temp.min * 9) / 5) + 32}°F
+                </div>
+              </div>
+            </div>`;
+  forecast = response.data.daily[6];
+  forecastElement.innerHTML += `<div class="col">
+              <p class="week-days">
+                ${formatDays(forecast.dt * 1000)}
+              </p>
+              <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="weather icon" id="day-1-icon">
+              <p class="description-forecast">
+                ${forecast.weather[0].description}
+              </p>
+              <div class="row min-max-temp">
+                <div class="col max-temp">
+                  ${Math.round(forecast.temp.max)}°C ${Math.round((forecast.temp.max * 9) / 5) + 32}°F
+                </div>
+                <div class="col min-temp">
+                  ${Math.round(forecast.temp.min)}°C ${Math.round((forecast.temp.min * 9) / 5) + 32}°F
+                </div>
+              </div>
+            </div>`;
+
 console.log(forecast);
 }
 
