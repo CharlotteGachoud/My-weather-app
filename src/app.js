@@ -1,34 +1,41 @@
-let currentDate = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-let day = days[currentDate.getDay()];
+function formatDate(timestamp){
+  let currentDate = new Date(timestamp);
+  let hours = currentDate.getHours();
+  let minutes = currentDate.getMinutes();
 
-let months = [
-  "January",
-  "Februar",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December"
-];
-let month = months[currentDate.getMonth()];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[currentDate.getDay()];
+  
+  let months = [
+    "January",
+    "Februar",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+  let month = months[currentDate.getMonth()];
+  
+  let date = currentDate.getDate();
 
-let date = currentDate.getDate();
+  return `${day}, ${month} ${date} <br/> ${hours}:${minutes}`;
+}
 
-document.querySelector("#date").innerHTML = `${day}, ${month} ${date}`;
+
 
 function search(city){
   let apiKey = "027401657e14d2712c8487adaadbd48b";
@@ -51,7 +58,8 @@ function displayTemperature(response){
   document.querySelector("#wind-data").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description)
-
+  document.querySelector("#date").innerHTML = formatDate(response.data.dt *1000);
+  
   celsiusTemperature = Math.round(response.data.main.temp);
 }
 
