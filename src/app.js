@@ -1,7 +1,13 @@
 function formatDate(timestamp){
   let currentDate = new Date(timestamp);
   let hours = currentDate.getHours();
+  if (hours < 10){
+    hours = `0${hours}`;
+  }
   let minutes = currentDate.getMinutes();
+  if (minutes < 10){
+    minutes = `0${minutes}`;
+  }
 
   let days = [
     "Sunday",
@@ -35,8 +41,6 @@ function formatDate(timestamp){
   return `${day}, ${month} ${date} <br/> ${hours}:${minutes}`;
 }
 
-
-
 function search(city){
   let apiKey = "027401657e14d2712c8487adaadbd48b";
   let apiUrl =  `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -62,7 +66,6 @@ function displayTemperature(response){
   
   celsiusTemperature = Math.round(response.data.main.temp);
 }
-
 
 document.querySelector("#search-form").addEventListener("submit", handlesubmit);
 
