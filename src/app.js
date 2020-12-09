@@ -47,7 +47,7 @@ function hourFormat(timestamp){
   return`${hours}:${minutes}`
 }
 
-document.querySelector("#hour").innerHTML = hourFormat();
+document.querySelector("#hour").innerHTML = hourFormat(new Date());
 
 function formatDays(timestamp) {
   let days = [
