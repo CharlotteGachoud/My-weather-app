@@ -53,8 +53,8 @@ form{
 }
 
 .illustration{
-  min-width: 350px;
   max-width: 100%;
+  border-radius: 0 0 100px 0;
 }
 
 .sentence{
@@ -74,7 +74,6 @@ form{
 
 .indications, .sunrise-set, .real-feel-text, .weather-description, .real-feel-temp, .week-days, .sentence{
   font-size: 20px;
-
 }
 
 .current-temp{
