@@ -26,8 +26,6 @@ p, .icon, .current-temp, .real-feel-text, .weather-description, .real-feel-temp,
 img{
   display: block;
   margin: 30px auto 10px;
-  min-width: 350px;
-  max-width: 100%;
 }
 
 div.humidity, .wind, .sunrise, .sunset{
@@ -52,6 +50,11 @@ form{
 .active:hover {
   text-decoration: none;
   color: black;
+}
+
+.illustration{
+  min-width: 350px;
+  max-width: 100%;
 }
 
 .sentence{
