@@ -101,8 +101,8 @@ function displayTemperature(response){
   document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description)
   document.querySelector("#date").innerHTML = formatDate(response.data.dt *1000);
-  document.querySelector("#sunrise-time").innerHTML = hourFormat(response.data.sys.sunrise * 1000);
-  document.querySelector("#sunset-time").innerHTML = hourFormat(response.data.sys.sunset * 1000);
+  document.querySelector("#sunrise-time").innerHTML = hourFormat(response.data.sys.sunrise * 1000 + response.data.timezone *1000);
+  document.querySelector("#sunset-time").innerHTML = hourFormat(response.data.sys.sunset * 1000 + response.data.timezone *1000);
   
   celsiusTemperature = Math.round(response.data.main.temp);
 
