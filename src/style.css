@@ -64,10 +64,19 @@ form{
 .illustration{
   max-width: 100%;
   border-radius: 0 0 100px 0;
+  margin: 60px auto;
 }
 
-.sentence{
-  margin: 40px auto 40px;
+.sentence,{
+  margin: 0 auto 30px;
+}
+
+.search-form{
+  padding: 5px 5px 0;
+}
+
+.indications{
+    margin: 80px auto 80px;
 }
 
 .description-forecast{
@@ -93,14 +102,12 @@ form{
   font-size: 15px;
 }
 
-.weather-description, .last-uptdate, .current-date, .time, .current-temp{
+h1, .weather-description, .last-uptdate, .current-date, .time, .current-temp{
   margin: 0 auto;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
-.real-feel-text, .sunrise-set{
-  margin: 0 auto 30px;
+.real-feel-text{
+  margin: 0 auto 40px;
 }
 .weather-description, .description-forecast:first-letter{
   text-transform: capitalize;
