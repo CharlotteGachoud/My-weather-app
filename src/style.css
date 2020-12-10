@@ -2,6 +2,10 @@ body{
   font-family: 'Dosis', sans-serif;
 }
 
+div.wrapper{
+  margin-bottom: 40px;
+}
+
 div.container{
   margin: 50px auto 5px;
   max-width: 1000px;
@@ -19,11 +23,16 @@ p, .icon, .current-temp, .real-feel-text, .weather-description, .real-feel-temp,
   line-height: 1.5;
 }
 
- div.current-temp, .weather-description, .wind, .current-date{
+ div.weather-description, .wind{
   margin-bottom: 40px;
 }
 
-img{
+img.main-icon{
+  display: block;
+  margin: 0 auto;
+}
+
+img.forecast-icon{
   display: block;
   margin: 30px auto 10px;
 }
@@ -82,4 +91,17 @@ form{
 
 .code-by{
   font-size: 15px;
+}
+
+.weather-description, .last-uptdate, .current-date, .time, .current-temp{
+  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.real-feel-text, .sunrise-set{
+  margin: 0 auto 30px;
+}
+.weather-description, .description-forecast:first-letter{
+  text-transform: capitalize;
 }

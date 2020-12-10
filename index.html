@@ -14,52 +14,53 @@
   <link rel="stylesheet" href="images/snow.svg">
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <div class="card-body">
-        <div class="row">
-          <div class="col-xs-6 col-sm-4 column-one">
-            <h1 class="title city" id="city">
-              
-            </h1>
-            <div class="date-time">
-              <p class="last-uptdate" id="updated">Last updated</p>
-              <p class="current-date" id="date">
-                Friday, Decembre 04
-              </p>
-              <p class="time" id="hour">
+  <div class="wrapper">
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4 column-one">
+              <h1 class="title city" id="city">
                 
-              </p>
-            </div>
-            <div class="current-temp">
-             <span class="now-temp" id="temperature">
-
-             </span>
-             <a href="#" class="celsius active" id="celsius-link">°C</a> |
-             <a href="#" class="fahrenheit" id="fahrenheit-link">°F</a> 
-            </div>
-            <div class="icon">
-              <img src="" alt="weather icon" id="icon">
-            </div>
-            <div class="weather-description" id="description">
-              
-            </div>
-            <div class="real-feel-text">
-              Real feel
-              <br>
-              <span class="real-feel-temp" id=feels-like>
+              </h1>
+              <div class="date-time">
+                <p class="last-uptdate" id="updated">Last updated</p>
+                <p class="current-date" id="date">
+                  Friday, Decembre 04
+                </p>
+                <p class="time" id="hour">
+                  
+                </p>
+              </div>
+              <div class="current-temp">
+               <span class="now-temp" id="temperature">
+  
+               </span>
+               <a href="#" class="celsius active" id="celsius-link">°C</a> |
+               <a href="#" class="fahrenheit" id="fahrenheit-link">°F</a> 
+              </div>
+              <div>
+                <img src="" alt="weather icon" class="main-icon" id="icon">
+              </div>
+              <div class="weather-description" id="description">
                 
-              </span>
-              <span class="celsius">°C</span>
+              </div>
+              <div class="real-feel-text">
+                Real feel
+                <br>
+                <span class="real-feel-temp" id=feels-like>
+                  
+                </span>
+                <span class="celsius">°C</span>
+              </div>
             </div>
-          </div>
-
-          <div class="col-xs-6 col-sm-4 column-two">
-            <img src="images/snow.svg" alt="Scenary" class="illustration" >
-            <p class="sentence"><em>How about a nice cup of coco?</em></p>
-          </div>
-
-          <div class="col-xs-6 col-sm-4 column-three">
+  
+            <div class="col-xs-6 col-sm-4 column-two">
+              <img src="images/snow.svg" alt="Scenary" class="illustration" >
+              <p class="sentence"><em>How about a nice cup of coco?</em></p>
+            </div>
+  
+            <div class="col-xs-6 col-sm-4 column-three">
             <form id="search-form">
               <div class="row search-bar">
                 <div class="col">
@@ -114,16 +115,17 @@
                 </span>
             </div>
             </div>
+            </div>
           </div>
+  
+          <div class="row forecast" id="forecast">
+  
         </div>
-
-        <div class="row forecast" id="forecast">
-
       </div>
     </div>
-  </div>
-  <div class="code-by">
-    <a href="https://github.com/CharlotteGachoud/My-weather-app" class="open-source-link" target="_blank">Open-source code</a> by Charlotte Gachoud
+    <div class="code-by">
+      <a href="https://github.com/CharlotteGachoud/My-weather-app" class="open-source-link" target="_blank">Open-source code</a> by Charlotte Gachoud
+    </div>
   </div>
   <script src="src/app.js"></script>
 </body>

@@ -75,7 +75,7 @@ function displayForecast(response){
                 <p class="week-days">
                   ${formatDays(forecast.dt * 1000)}
                 </p>
-                <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="weather icon" id="day-1-icon">
+                <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt="weather icon" class="forecast-icon" id="day-1-icon">
                 <p class="description-forecast">
                   ${forecast.weather[0].description}
                 </p>
