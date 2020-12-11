@@ -98,7 +98,7 @@ function changeSentence(response){
   } else if(response.data.main.temp >= 20) {sentence.innerHTML =
     `Hey there Mr. Blue, we're so pleased to be with you. Look around see what you do, everybody smiles at you 😁`;
   } else if(response.data.main.temp <=5){ sentence.innerHTML = 
-    `Don't forget your scarf and hat 🧣`;
+    `Don't forget your scarf and hat hat 🥶`;
   } else if(response.data.main.temp <= 0 || response.data.weather[0].main == "snow"){
     sentence.innerHTML = `Winter coats 🧥 and snowboots 👢 are a must`;
   } else if(response.data.weather[0].main == "Rain" || response.data.weather[0].main == "Drizzle"){
@@ -132,11 +132,11 @@ function displayTemperature(response){
   document.querySelector("#date").innerHTML = formatDate(response.data.dt *1000);
   document.querySelector("#sunrise-time").innerHTML = hourFormat((response.data.sys.sunrise + response.data.timezone) * 1000);
   document.querySelector("#sunset-time").innerHTML = hourFormat((response.data.sys.sunset + response.data.timezone) * 1000);
-  
+ 
   celsiusTemperature = Math.round(response.data.main.temp);
 
   changeSentence(response);
-  
+
   let apiKey = "027401657e14d2712c8487adaadbd48b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
