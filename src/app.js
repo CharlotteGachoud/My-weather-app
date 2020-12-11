@@ -136,7 +136,7 @@ function displayTemperature(response){
   celsiusTemperature = Math.round(response.data.main.temp);
 
   changeSentence(response);
-
+  
   let apiKey = "027401657e14d2712c8487adaadbd48b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
