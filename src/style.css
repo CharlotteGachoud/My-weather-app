@@ -74,6 +74,11 @@ form{
   padding: 5px 5px 0;
 }
 
+.btn-search{
+  background: rgba(0, 86, 179, 0.7);
+  border: rgba(0, 86, 179, 0.7);
+}
+
 .indications{
     margin: 80px auto 80px;
 }
