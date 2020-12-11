@@ -132,7 +132,7 @@ function displayTemperature(response){
   document.querySelector("#date").innerHTML = formatDate(response.data.dt *1000);
   document.querySelector("#sunrise-time").innerHTML = hourFormat((response.data.sys.sunrise + response.data.timezone) * 1000);
   document.querySelector("#sunset-time").innerHTML = hourFormat((response.data.sys.sunset + response.data.timezone) * 1000);
- 
+
   celsiusTemperature = Math.round(response.data.main.temp);
 
   changeSentence(response);
