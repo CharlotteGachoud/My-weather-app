@@ -91,6 +91,35 @@ function displayForecast(response){
   }
 }
 
+function changeSentence(response){
+  let sentence = document.querySelector("#catch-phrase");
+  if(response.data.main.temp >= 25){sentence.innerHTML =
+    `Mr. Blue Sky please tell us why, you had to hide away for so long, so long. Where did we go wrong? 🌞`;
+  } else if(response.data.main.temp >= 20) {sentence.innerHTML =
+    `Hey there Mr. Blue, we're so pleased to be with you. Look around see what you do, everybody smiles at you 😁`;
+  } else if(response.data.main.temp <=5){ sentence.innerHTML = 
+    `Don't forget your scarf and hat 🧣`;
+  } else if(response.data.main.temp <= 0 || response.data.weather[0].main == "snow"){
+    sentence.innerHTML = `Winter coats 🧥 and snowboots 👢 are a must`;
+  } else if(response.data.weather[0].main == "Rain" || response.data.weather[0].main == "Drizzle"){
+    sentence.innerHTML = `Where is your umbrella, ella, ella, eh, eh, eh 🌂`;
+  } else if(response.data.weather[0].main == "Thuderstorm"){
+    sentence.innerHTML = `Try not to get THUNDERSTRUCK 🌩`;
+  } else if(response.data.weather[0].main == "Mist" 
+  || response.data.weather[0].main == "Smoke"
+  || response.data.weather[0].main == "Haze"
+  || response.data.weather[0].main == "Dust"
+  || response.data.weather[0].main == "Fog"
+  || response.data.weather[0].main == "Sand"
+  || response.data.weather[0].main == "Ash"){
+    sentence.innerHTML = `Even when the mist fogs up our sight still there is a way out 🌫`;
+  } else if(response.data.weather[0].main == "Squall" || response.data.weather[0].main == "Tornado" ){
+    sentence.innerHTML = `You better seek a shelter! 🌪`;
+  } else {
+    sentence.innerHTML = `Aren't you glad you checked the forecast before planning your trip? 👍`;
+  }
+}
+
 function displayTemperature(response){
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
@@ -105,6 +134,8 @@ function displayTemperature(response){
   document.querySelector("#sunset-time").innerHTML = hourFormat((response.data.sys.sunset + response.data.timezone) * 1000);
   
   celsiusTemperature = Math.round(response.data.main.temp);
+
+  changeSentence(response);
 
   let apiKey = "027401657e14d2712c8487adaadbd48b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.coord.lat}&lon=${response.data.coord.lon}&appid=${apiKey}&units=metric`;
