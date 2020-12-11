@@ -98,7 +98,7 @@ function changeSentence(response){
   } else if(response.data.main.temp >= 20) {sentence.innerHTML =
     `Hey there Mr. Blue, we're so pleased to be with you. Look around see what you do, everybody smiles at you 😁`;
   } else if(response.data.main.temp <=5){ sentence.innerHTML = 
-    `Don't forget your scarf and hat hat 🥶`;
+    `Don't forget your scarf and hat 🥶`;
   } else if(response.data.main.temp <= 0 || response.data.weather[0].main == "snow"){
     sentence.innerHTML = `Winter coats 🧥 and snowboots 👢 are a must`;
   } else if(response.data.weather[0].main == "Rain" || response.data.weather[0].main == "Drizzle"){
