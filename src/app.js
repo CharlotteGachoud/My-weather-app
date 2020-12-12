@@ -99,14 +99,12 @@ function changeSentence(response){
     `Goodbye Winter, hello Spring 👋`;
   } else if(response.data.main.temp >= 15) {sentence.innerHTML =
     `We love you Mr. Blue sky 😻`;
-  } else if(response.data.main.temp >=6){ sentence.innerHTML = 
+  } else if(response.data.main.temp >=5){ sentence.innerHTML = 
     `Maybe a second layer wouldn't be too much after all 🤷`;
   } else if(response.data.main.temp >=1){ sentence.innerHTML = 
-    `Brrr it's so cold out there 🥶`;
-  } else if(response.data.main.temp <= 1 || response.data.weather[0].main == "snow"){
-    sentence.innerHTML = `The answer is yes! There was enough space on that door 😿`;
+    `Brrr it's way too cold out there 🥶`;
   } else {
-    sentence.innerHTML = `Aren't you glad you checked the forecast before going on that trip? 😸`;
+    sentence.innerHTML = `The answer is yes! There was enough space on that floating door 😿`;
   }
 }
 
