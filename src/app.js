@@ -93,15 +93,15 @@ function displayForecast(response){
 
 function changeSentence(response){
   let sentence = document.querySelector("#catch-phrase");
-  if(response.data.main.temp >= 25){sentence.innerHTML =
+  if(response.data.main.temp >=25){sentence.innerHTML =
     `Sea, cocktail 🍸 and sun! Don't forget the sunscreen 😎`;
-  } else if(response.data.main.temp >= 20) {sentence.innerHTML =
+  } else if(response.data.main.temp >=20) {sentence.innerHTML =
     `Goodbye Winter, hello Spring 👋`;
-  } else if(response.data.main.temp >= 15) {sentence.innerHTML =
+  } else if(response.data.main.temp >=15) {sentence.innerHTML =
     `We love you Mr. Blue sky 😻`;
   } else if(response.data.main.temp >=5){ sentence.innerHTML = 
     `Maybe a second layer wouldn't be too much after all 🤷`;
-  } else if(response.data.main.temp >=1){ sentence.innerHTML = 
+  } else if(response.data.main.temp >=0){ sentence.innerHTML = 
     `Brrr it's way too cold out there 🥶`;
   } else {
     sentence.innerHTML = `The answer is yes! There was enough space on that floating door 😿`;
