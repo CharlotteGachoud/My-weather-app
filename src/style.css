@@ -43,7 +43,7 @@ div.humidity, .wind, .sunrise, .sunset{
   font-weight: 600;
 }
 
-h1, .week-days, .now-temp, .open-source-link, .max-temp{
+h1, .week-days, .now-temp, .open-source-link, .max-temp, .degree-sign-max{
   font-weight: 600;
 }
 
