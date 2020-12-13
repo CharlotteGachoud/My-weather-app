@@ -18,14 +18,13 @@ div.card{
   background: rgba(7, 104, 159, 0.2);
 }
 
-h1,
-p, .icon, .last-uptdate, .current-date, .time, .current-temp, .real-feel-text, .weather-description, .real-feel-temp, .forecast, .code-by{
+h1, p, .icon, .last-uptdate, .current-date, .time, .current-temp, .real-feel-text, .weather-description, .real-feel-temp, .forecast, .code-by{
   text-align: center;
   line-height: 1.5;
   margin: 0 auto;
 }
 
- div.weather-description, .wind, .sentence, .real-feel-text{
+div.weather-description, .wind, .sentence, .real-feel-text{
   margin: 0 auto 30px;
 }
 
@@ -47,7 +46,6 @@ div.humidity, .wind, .sunrise, .sunset{
 h1, .week-days, .now-temp, .open-source-link, .max-temp{
   font-weight: 600;
 }
-
 
 form{
   margin: 12px 5px 52px;
@@ -97,11 +95,11 @@ form{
   margin: 0 auto 20px;
 }
 
-.max-temp{
+.max-temp, .degree-sign-max{
   color: #EC6E4C;
 }
 
-.min-temp{
+.min-temp, .degree-sign-min{
   color: #0056B3;
 }
 
