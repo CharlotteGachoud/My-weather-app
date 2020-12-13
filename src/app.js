@@ -80,12 +80,12 @@ function displayForecast(response){
                   ${forecast.weather[0].description}
                 </p>
                 <div class="row min-max-temp">
-                  <div class="col max-temp">
-                    ${Math.round(forecast.temp.max)}°C ${Math.round((forecast.temp.max * 9) / 5) + 32}°F
+                  <div class="col">
+                    <span class="max-temp">${Math.round(forecast.temp.max)}°C | ${Math.round((forecast.temp.max * 9) / 5) + 32}°F</span>
+                    </br>
+                    <span class="min-temp">${Math.round(forecast.temp.min)}°C | ${Math.round((forecast.temp.min * 9) / 5) + 32}°F</span>
                   </div>
-                  <div class="col min-temp">
-                    ${Math.round(forecast.temp.min)}°C ${Math.round((forecast.temp.min * 9) / 5) + 32}°F
-                  </div>
+
                 </div>
               </div>`;
   }
