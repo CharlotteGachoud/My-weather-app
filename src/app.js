@@ -195,9 +195,6 @@ function displayFahrenheitTemperature(event){
   item.innerHTML = `${forecastMinUnit}`;
   });
 
-  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-  celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
 }
 
 function displayCelsiusTemperature(event){
@@ -227,10 +224,7 @@ function displayCelsiusTemperature(event){
   
   document.querySelectorAll("#forecast-min-unit").forEach(function(item){
   item.innerHTML = forecastMinUnit;
-  });
-    
-  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-  celsiusLink.addEventListener("click", displayCelsiusTemperature);
+  });    
 }
 
 let celsiusTemperature = null;
