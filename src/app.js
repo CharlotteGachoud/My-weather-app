@@ -121,6 +121,8 @@ function displayTemperature(response){
 
   celsiusTemperature = Math.round(response.data.main.temp);
   celciusTemperatureReal = Math.round(response.data.main.feels_like);
+  windSpeed = Math.round(response.data.wind.speed);
+  windUnit = "Km/h";
 
   changeSentence(response);
 
@@ -157,6 +159,12 @@ function displayFahrenheitTemperature(event){
   let fahrenheitTemperatureReal = (celciusTemperatureReal * 9 / 5) + 32;
   document.querySelector("#feels-like").innerHTML = Math.round(fahrenheitTemperatureReal);
 
+  let windSpeedUnit = (windSpeed * 0.6);
+  document.querySelector("#wind-data").innerHTML = Math.round(windSpeedUnit)
+
+  let windUnit = `mph`;
+  document.querySelector("#wind-unit").innerHTML = `${windUnit}`;
+
   document.querySelectorAll("#forecast-max").forEach(function (item) {
   let currentTemp = item.innerHTML;
   item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
@@ -178,7 +186,10 @@ function displayCelsiusTemperature(event){
   fahrenheitLink.classList.remove("active");
   document.querySelector("#temperature").innerHTML = celsiusTemperature;
 
-  document.querySelector("#feels-like").innerHTML = Math.round(celciusTemperatureReal);
+  document.querySelector("#feels-like").innerHTML = celciusTemperatureReal;
+
+  document.querySelector("#wind-data").innerHTML = windSpeed;
+  document.querySelector("#wind-unit").innerHTML = windUnit;
 
   document.querySelectorAll("#forecast-max").forEach(function (item) {
   let currentTemp = item.innerHTML;
@@ -196,6 +207,8 @@ function displayCelsiusTemperature(event){
 
 let celsiusTemperature = null;
 let celciusTemperatureReal = null;
+let windSpeedUnit = null;
+let windUnit = null;
 
 let fahrenheitLink = document.querySelector("#imperial-btn")
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
