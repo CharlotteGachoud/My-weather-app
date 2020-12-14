@@ -120,6 +120,7 @@ function displayTemperature(response){
   document.querySelector("#sunset-time").innerHTML = hourFormat((response.data.sys.sunset + response.data.timezone) * 1000);
 
   celsiusTemperature = Math.round(response.data.main.temp);
+  celciusTemperatureReal = Math.round(response.data.main.feels_like);
 
   changeSentence(response);
 
