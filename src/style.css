@@ -56,19 +56,18 @@ form{
   font-size: 32px;
 }
 
-.active {
-  color: black;
-  cursor: default;
-  font-weight: 900;
-}
-
-.active:hover {
-  text-decoration: none;
-  color: black;
-}
-
 .btn-units{
-margin: 20px auto 0;
+  margin: 20px auto 0;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-units:hover, .btn-search:hover{
+  color: #0056B3;
+  background: #ffffff;
+}
+
+.active {
+  font-weight: 900;
 }
 
 .illustration{
@@ -86,6 +85,7 @@ margin: 20px auto 0;
   box-shadow: 3px 3px 5px 1px rgba(0, 86, 179, 0.2);
   transition: all 200ms ease-in-out;
 }
+
 
 .indications{
     margin: 80px auto 80px;
