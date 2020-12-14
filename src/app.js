@@ -81,8 +81,8 @@ function displayForecast(response){
                 </p>
                 <div class="row min-max-temp">
                   <div class="col">
-                    <span class="max-temp" id="forecast-max">${Math.round(forecast.temp.max)}</span><span class="degree-sign-max">°</span> |
-                    <span class="min-temp" id="forecast-min">${Math.round(forecast.temp.min)}</span><span class="degree-sign-min">°</span>
+                    <span class="max-temp" id="forecast-max">${Math.round(forecast.temp.max)}</span><span class="degree-sign-max forecast-unit" id="forecast-max-unit">°C</span> |
+                    <span class="min-temp" id="forecast-min">${Math.round(forecast.temp.min)}</span><span class="degree-sign-min forecast-unit" id="forecast-min-unit">°C</span>
                   </div>
                 </div>
               </div>`;
@@ -123,6 +123,10 @@ function displayTemperature(response){
   celciusTemperatureReal = Math.round(response.data.main.feels_like);
   windSpeed = Math.round(response.data.wind.speed);
   windUnit = "Km/h";
+  currentTempUnit = "°C";
+  realTempUnit = `${currentTempUnit}`;
+  forecastMaxUnit = `${currentTempUnit}`;
+  forecastMinUnit = `${currentTempUnit}`;
 
   changeSentence(response);
 
@@ -165,6 +169,12 @@ function displayFahrenheitTemperature(event){
   let windUnit = `mph`;
   document.querySelector("#wind-unit").innerHTML = `${windUnit}`;
 
+  let currentTempUnit = `°F`;
+  document.querySelector("#current-temp-unit").innerHTML = `${currentTempUnit}`;
+  
+  let realTempUnit = `${currentTempUnit}`;
+  document.querySelector("#real-temp-unit").innerHTML = `${realTempUnit}`;
+
   document.querySelectorAll("#forecast-max").forEach(function (item) {
   let currentTemp = item.innerHTML;
   item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
@@ -173,6 +183,16 @@ function displayFahrenheitTemperature(event){
   document.querySelectorAll("#forecast-min").forEach(function (item) {
   let currentTemp = item.innerHTML;
   item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
+  });
+
+  document.querySelectorAll("#forecast-max-unit").forEach(function(item){
+  let forecastMaxUnit = `${currentTempUnit}`;
+  item.innerHTML = `${forecastMaxUnit}`;
+  });
+
+  document.querySelectorAll("#forecast-min-unit").forEach(function(item){
+  let forecastMinUnit = `${currentTempUnit}`;
+  item.innerHTML = `${forecastMinUnit}`;
   });
 
   fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
@@ -185,12 +205,12 @@ function displayCelsiusTemperature(event){
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   document.querySelector("#temperature").innerHTML = celsiusTemperature;
-
   document.querySelector("#feels-like").innerHTML = celciusTemperatureReal;
-
   document.querySelector("#wind-data").innerHTML = windSpeed;
   document.querySelector("#wind-unit").innerHTML = windUnit;
-
+  document.querySelector("#current-temp-unit").innerHTML = currentTempUnit;
+  document.querySelector("#real-temp-unit").innerHTML = realTempUnit;
+  
   document.querySelectorAll("#forecast-max").forEach(function (item) {
   let currentTemp = item.innerHTML;
   item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
@@ -199,6 +219,14 @@ function displayCelsiusTemperature(event){
   document.querySelectorAll("#forecast-min").forEach(function (item) {
   let currentTemp = item.innerHTML;
   item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
+  });
+
+  document.querySelectorAll("#forecast-max-unit").forEach(function(item){
+  item.innerHTML = forecastMaxUnit;
+  });
+  
+  document.querySelectorAll("#forecast-min-unit").forEach(function(item){
+  item.innerHTML = forecastMinUnit;
   });
     
   fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
@@ -209,6 +237,10 @@ let celsiusTemperature = null;
 let celciusTemperatureReal = null;
 let windSpeedUnit = null;
 let windUnit = null;
+let currentTempUnit = null;
+let realTempUnit = null;
+let forecastMaxUnit = null;
+let forecastMinUnit = null;
 
 let fahrenheitLink = document.querySelector("#imperial-btn")
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
