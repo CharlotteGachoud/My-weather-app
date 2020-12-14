@@ -129,11 +129,14 @@ function displayTemperature(response){
   axios.get(apiUrl).then(displayForecast);
 }
 
+function errorFunction() {
+  alert(`Sorry, the location was not found. Check the spelling!`);
+}
+
 function search(city){
   let apiKey = "027401657e14d2712c8487adaadbd48b";
   let apiUrl =  `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayTemperature);
-  
+  axios.get(apiUrl).then(displayTemperature).catch(errorFunction);
 }
 
 function handlesubmit(event){
