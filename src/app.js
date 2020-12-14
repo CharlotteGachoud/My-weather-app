@@ -149,15 +149,16 @@ function displayFahrenheitTemperature(event){
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5+ 32
   document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemperature);
+  
+  let fahrenheitTemperatureReal = (celciusTemperatureReal * 9 / 5) + 32;
+  document.querySelector("#feels-like").innerHTML = Math.round(fahrenheitTemperatureReal);
 
-  let forecastMaxElements = document.querySelectorAll("#forecast-max");
-  forecastMaxElements.forEach(function (item) {
+  document.querySelectorAll("#forecast-max").forEach(function (item) {
   let currentTemp = item.innerHTML;
   item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
   });
   
-  let forecastMinElements = document.querySelectorAll("#forecast-min");
-  forecastMinElements.forEach(function (item) {
+  document.querySelectorAll("#forecast-min").forEach(function (item) {
   let currentTemp = item.innerHTML;
   item.innerHTML = Math.round((currentTemp * 9) / 5 + 32);
   });
@@ -173,14 +174,14 @@ function displayCelsiusTemperature(event){
   fahrenheitLink.classList.remove("active");
   document.querySelector("#temperature").innerHTML = celsiusTemperature;
 
-  let forecastMaxElements = document.querySelectorAll("#forecast-max");
-  forecastMaxElements.forEach(function (item) {
+  document.querySelector("#feels-like").innerHTML = Math.round(celciusTemperatureReal);
+
+  document.querySelectorAll("#forecast-max").forEach(function (item) {
   let currentTemp = item.innerHTML;
   item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
   });
   
-  let forecastMinElements = document.querySelectorAll("#forecast-min");
-  forecastMinElements.forEach(function (item) {
+  document.querySelectorAll("#forecast-min").forEach(function (item) {
   let currentTemp = item.innerHTML;
   item.innerHTML = Math.round(((currentTemp - 32) * 5) / 9);
   });
@@ -190,6 +191,7 @@ function displayCelsiusTemperature(event){
 }
 
 let celsiusTemperature = null;
+let celciusTemperatureReal = null;
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link")
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
