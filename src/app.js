@@ -116,9 +116,7 @@ function displayTemperature(response){
   document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description)
   document.querySelector("#date").innerHTML = formatDate(response.data.dt *1000);
-  document.querySelector("#sunrise-time").innerHTML = hourFormat((response.data.sys.sunrise + response.data.timezone) * 1000);
-  document.querySelector("#sunset-time").innerHTML = hourFormat((response.data.sys.sunset + response.data.timezone) * 1000);
-
+  
   celsiusTemperature = Math.round(response.data.main.temp);
   celciusTemperatureReal = Math.round(response.data.main.feels_like);
   windSpeed = Math.round(response.data.wind.speed);
@@ -195,6 +193,8 @@ function displayFahrenheitTemperature(event){
   item.innerHTML = `${forecastMinUnit}`;
   });
 
+  fahrenheitLink.removeEventListener("click", displayFahrenheitTemperature);
+  celsiusLink.addEventListener("click", displayCelsiusTemperature);
 }
 
 function displayCelsiusTemperature(event){
@@ -224,7 +224,10 @@ function displayCelsiusTemperature(event){
   
   document.querySelectorAll("#forecast-min-unit").forEach(function(item){
   item.innerHTML = forecastMinUnit;
-  });    
+  });  
+  
+  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+  celsiusLink.removeEventListener("click", displayCelsiusTemperature);
 }
 
 let celsiusTemperature = null;
