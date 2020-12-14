@@ -64,6 +64,25 @@ function formatDays(timestamp) {
   return `${day}`;
 }
 
+  function convertDtToHours(dt) {
+    
+    let day = new Date(dt * 1000); 
+    let dayHour = day.getUTCHours();
+    let dayMinutes = day.getUTCMinutes();
+    if (dayHour < 10) {
+      dayHour = `0${dayHour}`;
+    } else {
+      dayHour = `${dayHour}`;
+    } if (dayMinutes < 10) {
+      dayMinutes = `0${dayMinutes}`;
+    } else {
+      dayMinutes = `${dayMinutes}`;
+    }
+  
+    let timeMinutesHour = `${dayHour}:${dayMinutes}`;
+    return timeMinutesHour;
+  }
+
 function displayForecast(response){
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
@@ -117,6 +136,16 @@ function displayTemperature(response){
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description)
   document.querySelector("#date").innerHTML = formatDate(response.data.dt *1000);
   
+  let sunriseApi = response.data.sys.sunrise + response.data.timezone;
+  let sunrise = convertDtToHours(sunriseApi);
+  let sunriseElement = document.querySelector("#sunrise-time");
+  sunriseElement.innerHTML = `${sunrise}`;
+
+  let sunsetApi = response.data.sys.sunset + response.data.timezone;
+  let sunset = convertDtToHours(sunsetApi);
+  let sunsetElement = document.querySelector("#sunset-time");
+  sunsetElement.innerHTML = `${sunset}`;
+
   celsiusTemperature = Math.round(response.data.main.temp);
   celciusTemperatureReal = Math.round(response.data.main.feels_like);
   windSpeed = Math.round(response.data.wind.speed);
