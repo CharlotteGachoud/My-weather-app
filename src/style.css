@@ -67,16 +67,20 @@ form{
   color: black;
 }
 
+.btn-units{
+margin: 20px auto 0;
+}
+
 .illustration{
   max-width: 100%;
-  margin: 60px auto;
+  margin: 40px auto;
 }
 
 .search-form{
   padding: 5px 5px 0;
 }
 
-.btn-search{
+.btn-search, .btn-units{
   background: rgba(0, 86, 179, 0.7);
   border: rgba(0, 86, 179, 0.7);
   box-shadow: 3px 3px 5px 1px rgba(0, 86, 179, 0.2);

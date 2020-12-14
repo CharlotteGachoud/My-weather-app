@@ -194,10 +194,10 @@ function displayCelsiusTemperature(event){
 let celsiusTemperature = null;
 let celciusTemperatureReal = null;
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link")
+let fahrenheitLink = document.querySelector("#imperial-btn")
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsius-link");
+let celsiusLink = document.querySelector("#metric-btn");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Cork");
